@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormClientComponent implements OnInit {
   step = 0;
+  typeClient!: string;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onChange(value: string) {
+    this.typeClient = value
   }
 
   setStep(index: number) {

@@ -71,28 +71,90 @@
   
   </mat-accordion>
    -->
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-sm-10">
-            <h2>Information client</h2>
-            <form>
-                  <div class="mb-3 mt-3">
+<form>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-10">
+                <h2>Information client</h2>
+                <div class="mb-3 mt-3">
                     <mat-form-field class="w-100" appearance="fill">
                         <mat-label>Type Client</mat-label>
-                        <mat-select>
-                          <mat-option>
-                            Individuale
-                          </mat-option>
-                          <mat-option>
-                            Entreprise
-                          </mat-option>
+                        <mat-select [value]="typeClient" (valueChange)="onChange($event)" >
+                            <mat-option value="physique">
+                                Physique
+                            </mat-option>
+                            <mat-option value="sociale">
+                                Sociale
+                            </mat-option>
                         </mat-select>
                     </mat-form-field>
-                  </div>
+                </div>
 
-                  <button mat-raised-button color="primary">Valider</button>
-              </form>
+                <!--button mat-raised-button color="primary">Valider</button-->
+
+            </div>
         </div>
     </div>
-</div>
+    <div class="container">
+        <div class="row g-3" *ngIf="typeClient == 'sociale'">
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-md-4">
+                <label for="inputPrenom" class="form-label">Prènom</label>
+                <input type="text" class="form-control" id="inputPrenom">
+              </div>
+              <div class="col-md-4">
+                <label for="inputCity" class="form-label">Etat civil</label>
+                <select id="inputCity" class="form-select">
+                    <option selected>---Séléctionner---</option>
+                    <option>Femme</option>
+                    <option>Homme</option>
+                  </select>
+              </div>
+              <div class="col-md-6">
+                <label for="inputPays" class="form-label">Nationalité</label>
+                <input type="text" class="form-control" id="inputPays">
+              </div>
+              <div class="col-md-6">
+                <label for="inputemail" class="form-label">E-mail</label>
+                <input type="text" class="form-control" id="inputemail">
+              </div>
+              <div class="col-md-6">
+                <label for="inputTeleFixe" class="form-label">Télèphone fixe</label>
+                <input type="text" class="form-control" id="inputTeleFixe">
+              </div>
+              <div class="col-md-6">
+                <label for="inputTelePortable" class="form-label">Télèphone portable</label>
+                <input type="text" class="form-control" id="inputTelePortable">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Ville</label>
+                <select id="inputCity" class="form-select">
+                    <option selected>Choisi une ville</option>
+                    <option>Agadir</option>
+                    <option>Azro</option>
+                    <option>Casablanca</option>
+                    <option>...</option>
+                  </select>
+              </div>
+              <div class="col-md-6">
+                <label for="inputZip" class="form-label">Code postal</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Valider</button>
+              </div>
+        </div>
+    </div>
 
+</form>

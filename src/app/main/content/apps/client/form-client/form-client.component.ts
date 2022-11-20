@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-client',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-client.component.scss']
 })
 export class FormClientComponent implements OnInit {
-  step = 0;
   typeClient!: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -18,16 +18,8 @@ export class FormClientComponent implements OnInit {
     this.typeClient = value
   }
 
-  setStep(index: number) {
-    this.step = index;
-  }
-
-  nextStep() {
-    this.step++;
-  }
-
-  prevStep() {
-    this.step--;
+  goBack() {
+    this.router.navigate(['./apps/list-clients'])
   }
 
 }

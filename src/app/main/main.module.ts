@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../core/modules/shared.module';
 import { PagesModule } from './content/pages/pages.module';
 import { ClientModule } from './content/apps/client/client.module';
+import { ListClientModule } from './content/apps/client/list-client/list-client.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ClientModule } from './content/apps/client/client.module';
     SharedModule,
     RouterModule,
     PagesModule,
-    ClientModule
+    ClientModule,
+    ListClientModule
   ],
   exports: [
     MainComponent

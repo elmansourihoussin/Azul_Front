@@ -11,6 +11,14 @@ const routes: Routes = [
     loadChildren: () => import('./main/content/apps/client/client.module').then(x => x.ClientModule)
   },
   {
+    path: 'apps/list-clients',
+    loadChildren: () => import('./main/content/apps/client/list-client/list-client.module').then(x => x.ListClientModule)
+  },
+  {
+    path: 'apps/form-client',
+    loadChildren: () => import('./main/content/apps/client/form-client/form-client.module').then(x => x.FormClientModule)
+  },
+  {
     path:'',
     redirectTo: 'apps/clients',
     pathMatch: 'full'

@@ -72,11 +72,11 @@
   </mat-accordion>
    -->
 <form>
-    <div class="container mt-4">
+    <div class="container mt-1">
         <div class="row justify-content-center">
             <div class="col-md-6 col-sm-10">
                 <h2>Information client</h2>
-                <div class="mb-3 mt-3">
+                <div class="mb-2 mt-1">
                     <mat-form-field class="w-100" appearance="fill">
                         <mat-label>Type Client</mat-label>
                         <mat-select [value]="typeClient" (valueChange)="onChange($event)" >
@@ -95,17 +95,21 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container pb-5 mb-5">
         <div class="row g-3" *ngIf="typeClient == 'sociale'">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label for="inputEmail4" class="form-label">Nom</label>
                 <input type="text" class="form-control" id="inputEmail4">
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
                 <label for="inputPrenom" class="form-label">Prènom</label>
                 <input type="text" class="form-control" id="inputPrenom">
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
+                <label for="inputDateDeNaissance" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="inputDateDeNaissance" >
+              </div>
+              <div class="col-md-3">
                 <label for="inputCity" class="form-label">Etat civil</label>
                 <select id="inputCity" class="form-select">
                     <option selected>---Séléctionner---</option>
@@ -113,19 +117,27 @@
                     <option>Homme</option>
                   </select>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
+                <label for="inputCin" class="form-label">CIN</label>
+                <input type="text" class="form-control" id="inputCin">
+              </div>
+              <div class="col-md-4">
+                <label for="inputNumPassport" class="form-label">Numéro passeport</label>
+                <input type="text" class="form-control" id="inputNumPassport">
+              </div>
+              <div class="col-md-4">
                 <label for="inputPays" class="form-label">Nationalité</label>
                 <input type="text" class="form-control" id="inputPays">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="inputemail" class="form-label">E-mail</label>
                 <input type="text" class="form-control" id="inputemail">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="inputTeleFixe" class="form-label">Télèphone fixe</label>
                 <input type="text" class="form-control" id="inputTeleFixe">
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label for="inputTelePortable" class="form-label">Télèphone portable</label>
                 <input type="text" class="form-control" id="inputTelePortable">
               </div>

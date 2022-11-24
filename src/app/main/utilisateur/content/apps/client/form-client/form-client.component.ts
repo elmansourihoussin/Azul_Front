@@ -19,7 +19,7 @@ export class FormClientComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['./apps/list-clients'])
+    this.router.navigate(['./apps/user/list-clients'])
   }
 
 }

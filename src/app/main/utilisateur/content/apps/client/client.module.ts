@@ -5,7 +5,7 @@ import { SharedModule } from 'src/app/core/modules/shared.module';
 import { FormClientComponent } from './form-client/form-client.component';
 import { CommonModule } from '@angular/common';
 import { ListClientComponent } from './list-client/list-client.component';
-
+/*
 const routers: Routes = [
   {
     path: 'form-client',
@@ -19,7 +19,7 @@ const routers: Routes = [
     redirectTo: 'form-client',
     pathMatch: 'full'
   }
-];
+];*/
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ const routers: Routes = [
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forChild(routers)
+    RouterModule
   ]
 })
 export class ClientModule { }

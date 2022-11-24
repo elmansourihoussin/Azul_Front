@@ -4,28 +4,36 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'apps/login',
-    loadChildren: () => import('./main/content/pages/authentification/authentification.module').then(x => x.AuthentificationModule)
+    loadChildren: () => import('./main/utilisateur/content/pages/authentification/authentification.module').then(x => x.AuthentificationModule)
   },
   {
+    path: 'apps/home',
+    loadChildren: () => import('./main/home/home.module').then(x => x.HomeModule)
+  },
+  {
+    path: 'apps/user',
+    loadChildren: () => import('./main/utilisateur/utilisateur.module').then(x => x.UtilisateurModule)
+  },
+ /* {
     path: 'apps/clients',
-    loadChildren: () => import('./main/content/apps/client/client.module').then(x => x.ClientModule)
+    loadChildren: () => import('./main/utilisateur/content/apps/client/client.module').then(x => x.ClientModule)
   },
   {
     path: 'apps/list-clients',
-    loadChildren: () => import('./main/content/apps/client/list-client/list-client.module').then(x => x.ListClientModule)
+    loadChildren: () => import('./main/utilisateur/content/apps/client/list-client/list-client.module').then(x => x.ListClientModule)
   },
   {
     path: 'apps/form-client',
-    loadChildren: () => import('./main/content/apps/client/form-client/form-client.module').then(x => x.FormClientModule)
-  },
+    loadChildren: () => import('./main/utilisateur/content/apps/client/form-client/form-client.module').then(x => x.FormClientModule)
+  },*/
   {
     path:'',
-    redirectTo: 'apps/clients',
+    redirectTo: 'apps/user',
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'apps/clients'
+    redirectTo: 'apps/user'
   }
 ];
 

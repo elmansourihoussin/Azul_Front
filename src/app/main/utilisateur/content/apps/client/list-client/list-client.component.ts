@@ -17,7 +17,7 @@ export class ListClientComponent implements OnInit {
 
   ColumnMode = ColumnMode;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     this.fetch((data: any) => {
       this.rows = data;
     });
@@ -27,7 +27,7 @@ export class ListClientComponent implements OnInit {
   }
 
   addClient() {
-    this.router.navigate(['./apps/form-client'])
+    this.router.navigate(['./apps/user/form-client'])
   }
 
   onPage(event: any) {
